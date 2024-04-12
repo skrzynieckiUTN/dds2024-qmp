@@ -9,13 +9,13 @@ public enum Tipo {
   POLERA(Categoria.PARTE_SUPERIOR),
   BOTAS(Categoria.CALZADO);
 
-Tipo(Categoria categoria) {
-  this.categoria = categoria;
-}
+  Tipo(Categoria categoria) {
+    this.categoria = categoria;
+  }
 
-private Categoria categoria;
+  private Categoria categoria;
 
-public Categoria getCategoria() {
-  return this.categoria;
-}
+  public Categoria getCategoria() {
+    return this.categoria;
+  }
 }
