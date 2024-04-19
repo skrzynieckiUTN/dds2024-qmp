@@ -1,12 +1,9 @@
+import Prenda.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PrendaTest {
-
-private Prenda prendaDeTelaYColorPrimario(Tipo tipo) {
-  return new Prenda(tipo, Material.CUERO,new ColorRgb(15,325,9), null, null);
-}
 
 @Test
 void laCategoriaDeUnaBOTAesCALZADO() {
@@ -25,6 +22,10 @@ void laCategoriaDeUnPANIUELOAesACCESTORIOS() {
   assertEquals(prendaDeTelaYColorPrimario(Tipo.PANIUELO).getCategoria(), Categoria.ACCESORIOS);
 }
 
+private Prenda prendaDeTelaYColorPrimario(Tipo tipo) {
+  return new Prenda(tipo, Material.CUERO,new ColorRgb(15,325,9), null, null);
+}
+
 @Test
 void prendaSinMaterialNoSePuedeCrear() { //se lanza la null pointer exception
   assertThrows(NullPointerException.class,
@@ -34,8 +35,7 @@ void prendaSinMaterialNoSePuedeCrear() { //se lanza la null pointer exception
 }
 
 @Test
-  void remeraNoPuedeSerParteInferior() {
-    assertNotEquals(prendaDeTelaYColorPrimario(Tipo.REMERA).getCategoria(), Categoria.CALZADO);
+void remeraNoPuedeSerParteInferior() {
+  assertNotEquals(prendaDeTelaYColorPrimario(Tipo.REMERA).getCategoria(), Categoria.CALZADO);
 }
-
 }

@@ -1,3 +1,5 @@
+package Prenda;
+
 public enum Tipo {
   GAFAS(Categoria.ACCESORIOS),
   REMERA(Categoria.PARTE_SUPERIOR),
@@ -7,7 +9,9 @@ public enum Tipo {
   ZAPATOS(Categoria.CALZADO),
   MUSCULOSA(Categoria.PARTE_SUPERIOR),
   POLERA(Categoria.PARTE_SUPERIOR),
-  BOTAS(Categoria.CALZADO);
+  BOTAS(Categoria.CALZADO),
+  CHOMBA(Categoria.PARTE_SUPERIOR),
+  CAMISA(Categoria.PARTE_SUPERIOR);
 
   Tipo(Categoria categoria) {
     this.categoria = categoria;

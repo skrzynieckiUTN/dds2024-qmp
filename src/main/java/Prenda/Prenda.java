@@ -1,3 +1,5 @@
+package Prenda;
+
 import static java.util.Objects.requireNonNull;
 
 public class Prenda {
@@ -12,8 +14,7 @@ public class Prenda {
                 ColorRgb colorSecundario, Trama trama) {
     this.tipo = requireNonNull(tipo, "El tipo de prenda es obligatorio");
     this.material = requireNonNull(material, "El tipo de material es obligatorio");
-    this.colorPrimario = requireNonNull(colorPrimario,
-        "El color primario de prenda es obligatorio");
+    this.colorPrimario = requireNonNull(colorPrimario, "El color primario de prenda es obligatorio");
     this.colorSecundario = colorSecundario;
     this.trama = trama;
   }
